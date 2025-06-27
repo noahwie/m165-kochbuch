@@ -2,6 +2,7 @@ package ch.wiss.m165kochbuchbackend.controller;
 
 import ch.wiss.m165kochbuchbackend.model.Kategorie;
 import ch.wiss.m165kochbuchbackend.repository.KategorieRepo;
+import ch.wiss.m165kochbuchbackend.service.KategorieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.repository.Update;
 import org.springframework.web.bind.annotation.*;
@@ -10,31 +11,37 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/kategorie")
+@CrossOrigin
 public class KategorieController {
 
-    @Autowired
-    private KategorieRepo repo;
+    private final KategorieService kategorieService;
+
+    public KategorieController(KategorieService kategorieService){
+        this.kategorieService = kategorieService;
+    }
+
+
 
 
     // Adding Kategorie
-    @PostMapping("")
+    @PostMapping
     public String saveKategorie(@RequestBody Kategorie kategorie){
-        repo.save(kategorie);
+        kategorieService.createKategorie(kategorie);
 
         return "Added Successfully";
     }
 
     // Getting List
-    @GetMapping("")
+    @GetMapping
     public List<Kategorie> getKategorie() {
 
-        return repo.findAll();
+        return kategorieService.getAllKategorie();
     }
 
     // Deleting Kategorie
     @DeleteMapping("/{id}")
     public String deleteKategorie (@PathVariable String id){
-        repo.deleteById(id);
+        kategorieService.deleteKategorieById(id);
 
         return "Deleted Successfully";
     }
@@ -42,14 +49,13 @@ public class KategorieController {
     // Getting Kategorie by ID
     @GetMapping(("/{id}"))
     public Kategorie getKategoriebyId(@PathVariable String id){
-        return repo.findById(id)
-                .orElseThrow(() -> new RuntimeException("Kategorie not found with id: " + id));
+        return kategorieService.findKategorieById(id);
     }
 
     // Updating Kategorie by ID
     @PutMapping
-    public String putKategorieById(@RequestBody Kategorie k){
-        repo.save(k);
+    public String putKategorieById(@PathVariable String id,@RequestBody Kategorie k){
+        kategorieService.updateKategorieById(id, k);
         return "Kategorie Updated";
     }
 
