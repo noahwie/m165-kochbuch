@@ -10,8 +10,13 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: example
     networks:
       - mongo-net
+    volumes:
+      - mongo-data:/data/db
 
 networks:
   mongo-net:
     name: mongo-net
     driver: bridge
+
+volumes: 
+  mongo-data:
