@@ -1,0 +1,12 @@
+services:
+  mongo-shell:
+    image: mongo
+    container_name: mongo-shell
+    entrypoint: ["tail", "-f", "/dev/null"]
+    networks:
+      - mongo-net
+
+networks:
+  mongo-net:
+    external: true
+
