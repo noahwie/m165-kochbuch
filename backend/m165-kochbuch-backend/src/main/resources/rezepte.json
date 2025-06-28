@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Spaghetti Bolognese",
+    "description": "A classic Italian pasta dish with a hearty meat and tomato sauce.",
+    "ingredients": [
+      "Spaghetti",
+      "Ground beef",
+      "Onion",
+      "Garlic",
+      "Tomatoes",
+      "Tomato paste",
+      "Salt",
+      "Pepper",
+      "Olive oil"
+    ],
+    "instructions": "Saut\u00e9 onions and garlic in olive oil. Add ground beef and cook until browned. Stir in tomatoes, tomato paste, salt, and pepper. Let it simmer for 30 minutes. Serve with spaghetti."
+  },
+  {
+    "name": "Pancakes",
+    "description": "Fluffy American-style pancakes, perfect for breakfast.",
+    "ingredients": [
+      "Flour",
+      "Sugar",
+      "Baking powder",
+      "Salt",
+      "Milk",
+      "Egg",
+      "Melted butter"
+    ],
+    "instructions": "Mix flour, sugar, baking powder, and salt. Whisk in milk, egg, and melted butter. Pour batter onto a hot pan and cook until golden brown on both sides."
+  },
+  {
+    "name": "Vegetable Curry",
+    "description": "A flavorful curry with fresh vegetables and coconut milk.",
+    "ingredients": [
+      "Onion",
+      "Garlic",
+      "Ginger",
+      "Curry paste",
+      "Mixed vegetables",
+      "Coconut milk",
+      "Salt",
+      "Pepper",
+      "Oil"
+    ],
+    "instructions": "Saut\u00e9 onion, garlic, and ginger in oil. Add curry paste and cook briefly. Add mixed vegetables and stir-fry. Pour in coconut milk and simmer for 15 minutes. Serve with rice."
+  },
+  {
+    "name": "Caesar Salad",
+    "description": "Fresh salad with crispy croutons and creamy dressing.",
+    "ingredients": [
+      "Romaine lettuce",
+      "Croutons",
+      "Parmesan cheese",
+      "Mayonnaise",
+      "Garlic",
+      "Lemon juice",
+      "Mustard",
+      "Salt",
+      "Pepper"
+    ],
+    "instructions": "Wash and chop romaine lettuce. Toast croutons in a pan. Prepare dressing with mayonnaise, garlic, lemon juice, mustard, and Parmesan. Mix everything together and top with Parmesan."
+  },
+  {
+    "name": "Chocolate Cake",
+    "description": "Moist and rich chocolate cake.",
+    "ingredients": [
+      "Flour",
+      "Sugar",
+      "Cocoa powder",
+      "Baking powder",
+      "Salt",
+      "Eggs",
+      "Milk",
+      "Vegetable oil",
+      "Vanilla extract"
+    ],
+    "instructions": "Mix flour, sugar, cocoa powder, baking powder, and salt. Add eggs, milk, oil, and vanilla extract. Stir until smooth. Pour into a greased baking pan and bake at 180\u00b0C (350\u00b0F) for about 35 minutes."
+  }
+]

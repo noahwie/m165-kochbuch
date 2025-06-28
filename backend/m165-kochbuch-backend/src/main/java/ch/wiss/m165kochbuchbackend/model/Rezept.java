@@ -13,6 +13,8 @@ public class Rezept {
     private String id;
     private String name;
     private String description;
+
+    // Zu list ändern (grund , Beretigestewllte dada von silas)
     private String ingredients;
     private String instructions;
 }
