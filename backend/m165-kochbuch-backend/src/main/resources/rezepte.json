@@ -1,80 +1,82 @@
 [
   {
+    "id": "1",
     "name": "Spaghetti Bolognese",
-    "description": "A classic Italian pasta dish with a hearty meat and tomato sauce.",
-    "ingredients": [
-      "Spaghetti",
-      "Ground beef",
-      "Onion",
-      "Garlic",
-      "Tomatoes",
-      "Tomato paste",
-      "Salt",
-      "Pepper",
-      "Olive oil"
-    ],
-    "instructions": "Saut\u00e9 onions and garlic in olive oil. Add ground beef and cook until browned. Stir in tomatoes, tomato paste, salt, and pepper. Let it simmer for 30 minutes. Serve with spaghetti."
+    "category": ["Hauptspeise", "Pasta"],
+    "description": "Classic Italian pasta with meat sauce.",
+    "ingredients": ["Spaghetti", "Ground beef", "Tomato sauce", "Onion", "Garlic", "Olive oil", "Salt", "Pepper"],
+    "instructions": "Cook spaghetti. Brown beef with onion and garlic. Add tomato sauce and simmer. Combine and serve."
   },
   {
-    "name": "Pancakes",
-    "description": "Fluffy American-style pancakes, perfect for breakfast.",
-    "ingredients": [
-      "Flour",
-      "Sugar",
-      "Baking powder",
-      "Salt",
-      "Milk",
-      "Egg",
-      "Melted butter"
-    ],
-    "instructions": "Mix flour, sugar, baking powder, and salt. Whisk in milk, egg, and melted butter. Pour batter onto a hot pan and cook until golden brown on both sides."
-  },
-  {
-    "name": "Vegetable Curry",
-    "description": "A flavorful curry with fresh vegetables and coconut milk.",
-    "ingredients": [
-      "Onion",
-      "Garlic",
-      "Ginger",
-      "Curry paste",
-      "Mixed vegetables",
-      "Coconut milk",
-      "Salt",
-      "Pepper",
-      "Oil"
-    ],
-    "instructions": "Saut\u00e9 onion, garlic, and ginger in oil. Add curry paste and cook briefly. Add mixed vegetables and stir-fry. Pour in coconut milk and simmer for 15 minutes. Serve with rice."
-  },
-  {
+    "id": "2",
     "name": "Caesar Salad",
-    "description": "Fresh salad with crispy croutons and creamy dressing.",
-    "ingredients": [
-      "Romaine lettuce",
-      "Croutons",
-      "Parmesan cheese",
-      "Mayonnaise",
-      "Garlic",
-      "Lemon juice",
-      "Mustard",
-      "Salt",
-      "Pepper"
-    ],
-    "instructions": "Wash and chop romaine lettuce. Toast croutons in a pan. Prepare dressing with mayonnaise, garlic, lemon juice, mustard, and Parmesan. Mix everything together and top with Parmesan."
+    "category": ["Vorspeise", "Salat"],
+    "description": "Fresh salad with Caesar dressing and croutons.",
+    "ingredients": ["Romaine lettuce", "Croutons", "Parmesan", "Caesar dressing"],
+    "instructions": "Toss lettuce with dressing, top with croutons and Parmesan."
   },
   {
-    "name": "Chocolate Cake",
-    "description": "Moist and rich chocolate cake.",
-    "ingredients": [
-      "Flour",
-      "Sugar",
-      "Cocoa powder",
-      "Baking powder",
-      "Salt",
-      "Eggs",
-      "Milk",
-      "Vegetable oil",
-      "Vanilla extract"
-    ],
-    "instructions": "Mix flour, sugar, cocoa powder, baking powder, and salt. Add eggs, milk, oil, and vanilla extract. Stir until smooth. Pour into a greased baking pan and bake at 180\u00b0C (350\u00b0F) for about 35 minutes."
+    "id": "3",
+    "name": "Tomatensuppe",
+    "category": ["Vorspeise", "Suppe"],
+    "description": "Simple and creamy tomato soup.",
+    "ingredients": ["Tomatoes", "Onion", "Garlic", "Vegetable broth", "Cream", "Basil", "Salt", "Pepper"],
+    "instructions": "Cook tomatoes with onion and garlic, blend, add broth and cream, simmer and serve."
+  },
+  {
+    "id": "4",
+    "name": "Pizza Margherita",
+    "category": ["Hauptspeise", "Vegetarisch"],
+    "description": "Classic pizza with tomato, mozzarella, and basil.",
+    "ingredients": ["Pizza dough", "Tomato sauce", "Mozzarella", "Basil", "Olive oil"],
+    "instructions": "Top dough with sauce, cheese, and basil. Bake at high temperature until crisp."
+  },
+  {
+    "id": "5",
+    "name": "Pancakes",
+    "category": ["Frühstück", "Süßspeise"],
+    "description": "Fluffy breakfast pancakes.",
+    "ingredients": ["Flour", "Milk", "Eggs", "Baking powder", "Salt", "Butter"],
+    "instructions": "Mix ingredients, pour onto hot griddle, flip when bubbly, serve with syrup."
+  },
+  {
+    "id": "6",
+    "name": "Hühnersuppe",
+    "category": ["Suppe", "Hauptspeise"],
+    "description": "Comforting chicken soup with vegetables.",
+    "ingredients": ["Chicken", "Carrots", "Celery", "Onion", "Noodles", "Broth", "Salt", "Pepper"],
+    "instructions": "Simmer chicken with vegetables and broth, add noodles, cook until tender."
+  },
+  {
+    "id": "7",
+    "name": "Veggie Stir Fry",
+    "category": ["Vegetarisch", "Hauptspeise"],
+    "description": "Quick and healthy vegetable stir fry.",
+    "ingredients": ["Broccoli", "Carrots", "Bell pepper", "Soy sauce", "Garlic", "Ginger", "Rice"],
+    "instructions": "Stir-fry vegetables in hot pan, add sauce, serve with rice."
+  },
+  {
+    "id": "8",
+    "name": "Schokoladenkuchen",
+    "category": ["Dessert", "Süßspeise"],
+    "description": "Rich and moist chocolate cake.",
+    "ingredients": ["Flour", "Cocoa powder", "Sugar", "Eggs", "Butter", "Milk", "Baking powder"],
+    "instructions": "Mix ingredients, bake in preheated oven, let cool, optionally frost."
+  },
+  {
+    "id": "9",
+    "name": "Bratkartoffeln",
+    "category": ["Beilage", "Vegetarisch"],
+    "description": "Pan-fried crispy potatoes.",
+    "ingredients": ["Potatoes", "Onion", "Oil", "Salt", "Pepper", "Parsley"],
+    "instructions": "Boil and slice potatoes, fry with onion until crispy and golden."
+  },
+  {
+    "id": "10",
+    "name": "Omelette",
+    "category": ["Frühstück", "Vegetarisch"],
+    "description": "Quick egg omelette with cheese.",
+    "ingredients": ["Eggs", "Milk", "Cheese", "Salt", "Pepper", "Butter"],
+    "instructions": "Beat eggs, pour into pan, add cheese, fold and serve."
   }
 ]
