@@ -7,38 +7,73 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 
+/**
+ * Service class for handling business logic related to {@link Rezept} entities.
+ * Provides methods for CRUD operations and custom queries.
+ */
 @Service
 public class RezeptService {
-    private RezeptRepository rezeptRepository;
 
+    private final RezeptRepository rezeptRepository;
+
+    /**
+     * Constructs a new {@code RezeptService} with the given repository.
+     *
+     * @param rezeptRepository the repository used for database operations
+     */
     @Autowired
     public RezeptService(RezeptRepository rezeptRepository) {
         this.rezeptRepository = rezeptRepository;
     }
 
-
-    // get all rezepte
+    /**
+     * Retrieves all recipes from the database.
+     *
+     * @return a list of all recipes
+     */
     public List<Rezept> getAllRezepte() {
         return rezeptRepository.findAll();
     }
 
-    // get rezepte by id
+    /**
+     * Finds a recipe by its unique identifier.
+     *
+     * @param id the ID of the recipe
+     * @return the recipe with the specified ID
+     * @throws RuntimeException if the recipe is not found
+     */
     public Rezept findRezeptById(String id) {
         return rezeptRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Rezept not found with id: " + id));
     }
 
-    // create new rezept
+    /**
+     * Creates a new recipe and saves it to the database.
+     *
+     * @param rezept the recipe to create
+     * @return the created recipe
+     */
     public Rezept createRezept(Rezept rezept) {
         return rezeptRepository.save(rezept);
     }
 
-    // delete rezept
+    /**
+     * Deletes a recipe by its ID.
+     *
+     * @param id the ID of the recipe to delete
+     */
     public void deleteRezeptById(String id) {
         rezeptRepository.deleteById(id);
     }
 
-    // update rezept
+    /**
+     * Updates an existing recipe by its ID.
+     *
+     * @param id     the ID of the recipe to update
+     * @param rezept the new recipe data
+     * @return the updated recipe
+     * @throws RuntimeException if the recipe does not exist
+     */
     public Rezept updateRezeptById(String id, Rezept rezept) {
         if (!rezeptRepository.existsById(id)) {
             throw new RuntimeException("Rezept not found.");
@@ -47,7 +82,13 @@ public class RezeptService {
         return rezeptRepository.save(rezept);
     }
 
-    // find by category
+    /**
+     * Finds recipes that belong to any of the specified categories.
+     *
+     * @param category a list of category names
+     * @return a list of matching recipes
+     * @throws RuntimeException if no recipes are found
+     */
     public List<Rezept> findByCategory(List<String> category) {
         List<Rezept> rezepte = rezeptRepository.findByCategoryIn(category);
         if (rezepte.isEmpty()) {
@@ -56,12 +97,17 @@ public class RezeptService {
         return rezepte;
     }
 
-    // containing in name
-    public  List<Rezept> findByName(String name){
+    /**
+     * Finds recipes whose names contain the specified substring.
+     *
+     * @param name the substring to search for
+     * @return a list of matching recipes
+     * @throws RuntimeException if no recipes are found
+     */
+    public List<Rezept> findByName(String name) {
         List<Rezept> rezepte = rezeptRepository.findByNameContaining(name);
-        if (rezepte.isEmpty()){
-            throw new RuntimeException("No Rezepte found by This input" + name);
-
+        if (rezepte.isEmpty()) {
+            throw new RuntimeException("No Rezepte found by this input: " + name);
         }
         return rezepte;
     }
