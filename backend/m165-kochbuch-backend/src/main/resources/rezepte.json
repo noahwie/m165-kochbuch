@@ -1,82 +1,142 @@
 [
   {
-    "id": "1",
-    "name": "Spaghetti Bolognese",
-    "category": ["Hauptspeise", "Pasta"],
-    "description": "Classic Italian pasta with meat sauce.",
-    "ingredients": ["Spaghetti", "Ground beef", "Tomato sauce", "Onion", "Garlic", "Olive oil", "Salt", "Pepper"],
-    "instructions": "Cook spaghetti. Brown beef with onion and garlic. Add tomato sauce and simmer. Combine and serve."
+    "name": "Blue Crystal Batch #7",
+    "category": ["Meth Lab", "Illicit"],
+    "description": "Viktor’s prized formula – highly pure and deeply feared on the streets.",
+    "ingredients": ["Solvent-X", "Catalyst-7", "Precursor Powder", "Distilled Reagent"],
+    "instructions": "Mixed under controlled heat, cooled under vacuum. Packaged in candy tins."
   },
   {
-    "id": "2",
-    "name": "Caesar Salad",
-    "category": ["Vorspeise", "Salat"],
-    "description": "Fresh salad with Caesar dressing and croutons.",
-    "ingredients": ["Romaine lettuce", "Croutons", "Parmesan", "Caesar dressing"],
-    "instructions": "Toss lettuce with dressing, top with croutons and Parmesan."
+    "name": "Snowline 88",
+    "category": ["Cocaine Variant", "Cartel Grade"],
+    "description": "A synthetic blend mimicking coca leaf effects with turbo-charged absorption.",
+    "ingredients": ["Alkaloid mimic", "Lime binder", "Resin stabilizer", "Flavor mask"],
+    "instructions": "Dried, cut into bricks, and sealed with cartel stamp before shipping."
   },
   {
-    "id": "3",
-    "name": "Tomatensuppe",
-    "category": ["Vorspeise", "Suppe"],
-    "description": "Simple and creamy tomato soup.",
-    "ingredients": ["Tomatoes", "Onion", "Garlic", "Vegetable broth", "Cream", "Basil", "Salt", "Pepper"],
-    "instructions": "Cook tomatoes with onion and garlic, blend, add broth and cream, simmer and serve."
+    "name": "Black Tar X",
+    "category": ["Opioid", "Street Form"],
+    "description": "Thick, sticky, and smoked in alleys. Leaves a chemical burn if uncut.",
+    "ingredients": ["Base resin", "Molasses binder", "Painkiller extender"],
+    "instructions": "Pressure cooked for 6 hours. Foil-wrapped and hidden in car batteries."
   },
   {
-    "id": "4",
-    "name": "Pizza Margherita",
-    "category": ["Hauptspeise", "Vegetarisch"],
-    "description": "Classic pizza with tomato, mozzarella, and basil.",
-    "ingredients": ["Pizza dough", "Tomato sauce", "Mozzarella", "Basil", "Olive oil"],
-    "instructions": "Top dough with sauce, cheese, and basil. Bake at high temperature until crisp."
+    "name": "Nitro Dust",
+    "category": ["Stimulant", "Designer Drug"],
+    "description": "Fluorescent powder with a 4-minute onset. Popular at raves.",
+    "ingredients": ["Nitro crystal", "Carrier salt", "Binding gel"],
+    "instructions": "Dried under UV, powdered and scooped into vials with QR code labels."
   },
   {
-    "id": "5",
-    "name": "Pancakes",
-    "category": ["Frühstück", "Süßspeise"],
-    "description": "Fluffy breakfast pancakes.",
-    "ingredients": ["Flour", "Milk", "Eggs", "Baking powder", "Salt", "Butter"],
-    "instructions": "Mix ingredients, pour onto hot griddle, flip when bubbly, serve with syrup."
+    "name": "Razor Leaf",
+    "category": ["Hallucinogen", "Plant-Based"],
+    "description": "Used by jungle tribes, now mass-produced in city basements.",
+    "ingredients": ["Shredded leaf", "Fermentation acid", "Oil concentrate"],
+    "instructions": "Steeped, filtered through stone dust, bottled with wax seal."
   },
   {
-    "id": "6",
-    "name": "Hühnersuppe",
-    "category": ["Suppe", "Hauptspeise"],
-    "description": "Comforting chicken soup with vegetables.",
-    "ingredients": ["Chicken", "Carrots", "Celery", "Onion", "Noodles", "Broth", "Salt", "Pepper"],
-    "instructions": "Simmer chicken with vegetables and broth, add noodles, cook until tender."
+    "name": "Ghost Smoke",
+    "category": ["Inhalant", "Synthetic"],
+    "description": "Clear vapor with no scent — kills slowly, subtly.",
+    "ingredients": ["Ghost compound", "Fog enhancer", "Evaporation agent"],
+    "instructions": "Vaporized into canisters, used with mask rigs or vapepens."
   },
   {
-    "id": "7",
-    "name": "Veggie Stir Fry",
-    "category": ["Vegetarisch", "Hauptspeise"],
-    "description": "Quick and healthy vegetable stir fry.",
-    "ingredients": ["Broccoli", "Carrots", "Bell pepper", "Soy sauce", "Garlic", "Ginger", "Rice"],
-    "instructions": "Stir-fry vegetables in hot pan, add sauce, serve with rice."
+    "name": "Red Ice",
+    "category": ["Meth Variant", "Combat Drug"],
+    "description": "Red-tinted variant favored by underground fight clubs.",
+    "ingredients": ["Modified crystal", "Iron powder", "Blood coagulant"],
+    "instructions": "Cooled in freezer molds. Packaged in glass phials."
   },
   {
-    "id": "8",
-    "name": "Schokoladenkuchen",
-    "category": ["Dessert", "Süßspeise"],
-    "description": "Rich and moist chocolate cake.",
-    "ingredients": ["Flour", "Cocoa powder", "Sugar", "Eggs", "Butter", "Milk", "Baking powder"],
-    "instructions": "Mix ingredients, bake in preheated oven, let cool, optionally frost."
+    "name": "Neon Vein",
+    "category": ["Stimulant", "Neuroactive"],
+    "description": "Glows faintly in the dark. Injected straight to neck veins.",
+    "ingredients": ["Neuro-serum", "Light-reactive agent", "Pulse stabilizer"],
+    "instructions": "Sterilized under blacklight, filled in preloaded syringes."
   },
   {
-    "id": "9",
-    "name": "Bratkartoffeln",
-    "category": ["Beilage", "Vegetarisch"],
-    "description": "Pan-fried crispy potatoes.",
-    "ingredients": ["Potatoes", "Onion", "Oil", "Salt", "Pepper", "Parsley"],
-    "instructions": "Boil and slice potatoes, fry with onion until crispy and golden."
+    "name": "Void Candy",
+    "category": ["Psychedelic", "Edible"],
+    "description": "Looks like candy, kicks like a nightmare.",
+    "ingredients": ["Gel tab", "Memory disruptor", "Color booster"],
+    "instructions": "Molded into gummy shapes, sold in kids' candy wrappers."
   },
   {
-    "id": "10",
-    "name": "Omelette",
-    "category": ["Frühstück", "Vegetarisch"],
-    "description": "Quick egg omelette with cheese.",
-    "ingredients": ["Eggs", "Milk", "Cheese", "Salt", "Pepper", "Butter"],
-    "instructions": "Beat eggs, pour into pan, add cheese, fold and serve."
+    "name": "Shatter Oil",
+    "category": ["Concentrate", "Cannabinoid"],
+    "description": "Super-refined extract. One drop too much and you're out cold.",
+    "ingredients": ["Pressed resin", "Solvent V", "Thickening syrup"],
+    "instructions": "Heated in coils, cooled in glass cartridges. Branded for influencers."
+  },
+  {
+    "name": "Iron Lung",
+    "category": ["Gas Inhalant", "Experimental"],
+    "description": "Military prototype turned street nightmare. Locks up the lungs.",
+    "ingredients": ["Nano vapor", "Cold burst chemical", "Throat relaxant"],
+    "instructions": "Delivered via emergency inhaler. Illegal in 12 countries."
+  },
+  {
+    "name": "Dust Devil",
+    "category": ["Powdered Stimulant", "Desert Mix"],
+    "description": "Cooked under desert heat, this powder hits hard and dry.",
+    "ingredients": ["Crushed capsule", "Heat agent", "Dry flow binder"],
+    "instructions": "Bagged in handmade leather satchels. Popular with nomads."
+  },
+  {
+    "name": "Chrome Drop",
+    "category": ["Liquid Stimulant", "Tech Scene"],
+    "description": "Used by coders to stay wired for 72 hours. Addictive and unstable.",
+    "ingredients": ["Syrup-9", "Memory booster", "Metallic stabilizer"],
+    "instructions": "Stored in chrome droppers, hidden in energy drink bottles."
+  },
+  {
+    "name": "Whisper Gel",
+    "category": ["Sedative", "Designer"],
+    "description": "Odorless and tasteless gel that causes sleep paralysis.",
+    "ingredients": ["Synthetic relaxant", "Gel base", "Neutralizer"],
+    "instructions": "Applied topically or slipped into drinks. Detectable only via blood tests."
+  },
+  {
+    "name": "Phantom Haze",
+    "category": ["Inhalant", "Hallucinogen"],
+    "description": "Cloud-like vapor causing vivid auditory hallucinations.",
+    "ingredients": ["Fog compound", "Hallucinogenic extract", "Carrier gas"],
+    "instructions": "Released from aerosol canisters. Used in underground clubs."
+  },
+  {
+    "name": "Electric Bliss",
+    "category": ["Stimulant", "Party Drug"],
+    "description": "Small pills that increase energy and euphoric sensations.",
+    "ingredients": ["Neuroactivator", "Sugar binder", "Flavor enhancer"],
+    "instructions": "Pressed into tablets, packaged in neon blister packs."
+  },
+  {
+    "name": "Glass Spider",
+    "category": ["Crystalline Stimulant", "Street Drug"],
+    "description": "Sharp crystal shards that cause intense focus and paranoia.",
+    "ingredients": ["Crystalline powder", "Impurity binders", "Cutting agent"],
+    "instructions": "Packaged in small plastic bags with spider logo stickers."
+  },
+  {
+    "name": "Silent Venom",
+    "category": ["Poisonous Substance", "Experimental"],
+    "description": "Colorless liquid causing rapid paralysis without pain.",
+    "ingredients": ["Neurotoxin base", "Diluting agent", "Activator"],
+    "instructions": "Delivered via injection or stealth lacing in drinks."
+  },
+  {
+    "name": "Frostbite",
+    "category": ["Cryogenic Stimulant", "Winter Variant"],
+    "description": "Causes a cooling sensation while boosting alertness.",
+    "ingredients": ["Cooling agent", "Stimulant base", "Binding compound"],
+    "instructions": "Inhaled via spray canisters. Popular among underground courier networks."
+  },
+  {
+    "name": "Shadow Dust",
+    "category": ["Psychedelic", "Powder"],
+    "description": "Fine black powder inducing dissociative states and vivid visions.",
+    "ingredients": ["Dark alkaloid", "Drying agent", "Flow enhancer"],
+    "instructions": "Snorted or dissolved into liquids. Sold in secret markets."
   }
 ]
