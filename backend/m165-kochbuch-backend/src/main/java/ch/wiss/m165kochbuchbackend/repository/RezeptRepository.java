@@ -10,6 +10,7 @@ import java.util.List;
 public interface RezeptRepository extends MongoRepository<Rezept, String> {
     List<Rezept> findByCategoryIn(List<String> category);
     boolean existsByName(String name);
+    List<Rezept> findByNameContaining(String name);
 
 
 }

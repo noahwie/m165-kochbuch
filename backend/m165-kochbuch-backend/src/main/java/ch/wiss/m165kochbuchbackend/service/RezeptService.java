@@ -55,4 +55,14 @@ public class RezeptService {
         }
         return rezepte;
     }
+
+    // containing in name
+    public  List<Rezept> findByName(String name){
+        List<Rezept> rezepte = rezeptRepository.findByNameContaining(name);
+        if (rezepte.isEmpty()){
+            throw new RuntimeException("No Rezepte found by This input" + name);
+
+        }
+        return rezepte;
+    }
 }
