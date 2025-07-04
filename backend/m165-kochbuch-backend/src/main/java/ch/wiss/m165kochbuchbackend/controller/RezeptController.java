@@ -21,6 +21,11 @@ public class RezeptController {
         return rezeptService.getAllRezepte();
     }
 
+    @GetMapping("/get-by-category")
+    public List<Rezept> getByCategory(@RequestParam List<String> category){
+        return rezeptService.findByCategory(category);
+    }
+
     @GetMapping("/{id}")
     public Rezept getById(@PathVariable String id) {
         return rezeptService.findRezeptById(id);

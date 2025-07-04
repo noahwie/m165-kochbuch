@@ -2,10 +2,12 @@ package ch.wiss.m165kochbuchbackend.service;
 
 import ch.wiss.m165kochbuchbackend.model.Rezept;
 import ch.wiss.m165kochbuchbackend.repository.RezeptRepository;
+import jdk.jfr.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class RezeptService {
@@ -45,5 +47,14 @@ public class RezeptService {
         }
         rezept.setId(id);
         return rezeptRepository.save(rezept);
+    }
+
+    // find by category
+    public List<Rezept> findByCategory(List<String> category) {
+        List<Rezept> rezepte = rezeptRepository.findByCategoryIn(category);
+        if (rezepte.isEmpty()) {
+            throw new RuntimeException("Rezepte found for categories: " + category);
+        }
+        return rezepte;
     }
 }
