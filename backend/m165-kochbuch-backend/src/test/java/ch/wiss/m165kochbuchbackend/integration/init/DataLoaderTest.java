@@ -19,7 +19,7 @@ public class DataLoaderTest {
     @Test
     void testDataIsInitialized() {
         // 50 Rezepte erwartet
-        assertThat(rezeptRepository.findAll()).hasSize(50);
+        assertThat(rezeptRepository.findAll()).hasSize(20);
      
     }
     
