@@ -7,6 +7,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -17,6 +18,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import ch.wiss.m165kochbuchbackend.repository.RezeptRepository;
+import ch.wiss.m165kochbuchbackend.service.RezeptService;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -29,8 +31,11 @@ public class RezeptControllerMockTest {
      * Das sind sogenannte "Dependent On Components" kurz DOC's.
      * Die Funktionalität dieser Objekte wird vom Framework simuliert
      */
-    @MockBean
-    RezeptRepository productRepository;
+    @Mock
+    RezeptRepository rezeptRepository;
+
+    @Mock
+    RezeptService rezeptService;
    
     // das ist unser eigentliches Testobjekt bzw. SUT
     @Autowired
