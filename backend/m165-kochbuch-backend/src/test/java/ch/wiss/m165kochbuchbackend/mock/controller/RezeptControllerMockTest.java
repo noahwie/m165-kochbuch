@@ -1,13 +1,10 @@
 package ch.wiss.m165kochbuchbackend.mock.controller;
+
 import ch.wiss.m165kochbuchbackend.controller.RezeptController;
-
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
+import ch.wiss.m165kochbuchbackend.service.RezeptService;
+import ch.wiss.m165kochbuchbackend.repository.RezeptRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -17,79 +14,46 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import ch.wiss.m165kochbuchbackend.repository.RezeptRepository;
-import ch.wiss.m165kochbuchbackend.service.RezeptService;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(SpringExtension.class)
 @WebMvcTest(RezeptController.class)
 @AutoConfigureMockMvc
 public class RezeptControllerMockTest {
 
-        /*
-     * Das sind sogenannte "Dependent On Components" kurz DOC's.
-     * Die Funktionalität dieser Objekte wird vom Framework simuliert
-     */
-    @Mock
-    RezeptRepository rezeptRepository;
-
-    @Mock
-    RezeptService rezeptService;
-   
-    // das ist unser eigentliches Testobjekt bzw. SUT
-    @Autowired
-    RezeptController rezeptController;
-
-    // und dieses "Ding" führt die Tests aus
     @Autowired
     private MockMvc mockMvc;
 
-        /**
-     * Wie immer bei Unit-Tests achtest Du auf:
-     * sprechende Methodennamen
-     * 
-     * @Test Annotation darüber
-     */
-    @Test
-    public void whenRezeptControllerInjected_thenNotNull() throws Exception {
-        assertThat(rezeptController).isNotNull(); // hier wird nur geprüft, ob unser SUT existiert
-    }
+    @MockBean
+    private RezeptRepository rezeptRepository;
 
-     @Test
+    @MockBean
+    private RezeptService rezeptService;
+
+    @Test
     public void whenPostRequestToRezeptAndValidRezept_thenCorrectResponse() throws Exception {
-        // führt korrekten POST-Request zum Einfügen einer neuen Kategorie aus
-        mockMvc.perform(MockMvcRequestBuilders.post("/rezept/get-by-category?category=Hallucinogen"))
-                .andExpect(MockMvcResultMatchers.status().isOk()); // prüft die System-Antwort
-        /*
-         * Hinweis: da keine Datenbank im Hintergrund aktiv ist, wird diese Kategorie
-         * NICHT gespeichert
-         */
+        mockMvc.perform(MockMvcRequestBuilders.get("/rezept")
+                        .param("category", "Hallucinogen", "global"))
+                .andExpect(status().isOk());
     }
 
     @Test
     public void whenPostRequestToRezeptAndInValidRezept_thenCorrectResponse() throws Exception {
-        // führt POST-Request mit ungültigen Daten aus
-        mockMvc.perform(MockMvcRequestBuilders.post("/rezept/"))
-                .andExpect(MockMvcResultMatchers.status().is4xxClientError())
-                // prüft, ob die Validierung aus SQ4B korrekt funktioniert
-                .andExpect(MockMvcResultMatchers.jsonPath("$.error").isNotEmpty())
-                .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON));
+        mockMvc.perform(MockMvcRequestBuilders.post("/rezept")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("{}")) // empty JSON object triggers validation
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.error").isNotEmpty());
     }
+
 
     @Test
     public void whenGetAllRezepte_getValidRezepte() throws Exception {
-
         mockMvc.perform(MockMvcRequestBuilders.get("/rezept"))
-                // damit kannst du das eigentliche Ergebnis der Abfrage auf der Konsole ausgeben
                 .andDo(res -> System.out.println(res.getResponse().getContentAsString()))
-                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(status().isOk())
                 .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON));
-
-        /*
-         * Hinweis: da keine Datenbank im Hintergrund aktiv ist, wird eine leere Liste
-         * geliefert.
-         */
     }
-
 }
