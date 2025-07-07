@@ -2,6 +2,8 @@ package ch.wiss.m165kochbuchbackend.controller;
 
 import ch.wiss.m165kochbuchbackend.model.Rezept;
 import ch.wiss.m165kochbuchbackend.service.RezeptService;
+import jakarta.validation.Valid;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -76,7 +78,7 @@ public class RezeptController {
      * @return the created recipe
      */
     @PostMapping
-    public Rezept create(@RequestBody Rezept rezept) {
+    public Rezept create(@Valid @RequestBody Rezept rezept) {
         return rezeptService.createRezept(rezept);
     }
 
@@ -88,7 +90,7 @@ public class RezeptController {
      * @return the updated recipe
      */
     @PutMapping("/{id}")
-    public Rezept update(@PathVariable String id, @RequestBody Rezept rezept) {
+    public Rezept update(@PathVariable String id,@Valid @RequestBody Rezept rezept) {
         return rezeptService.updateRezeptById(id, rezept);
     }
 
