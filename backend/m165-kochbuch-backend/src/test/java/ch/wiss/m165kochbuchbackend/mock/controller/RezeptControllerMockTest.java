@@ -21,7 +21,7 @@ import ch.wiss.m165kochbuchbackend.repository.RezeptRepository;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
-@WebMvcTest
+@WebMvcTest(RezeptController.class)
 @AutoConfigureMockMvc
 public class RezeptControllerMockTest {
 
