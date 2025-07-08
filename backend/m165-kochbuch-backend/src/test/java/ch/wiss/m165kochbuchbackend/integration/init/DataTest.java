@@ -22,6 +22,7 @@ public class DataTest {
  
     private Rezept createTestRezept() {
         Rezept rezept = new Rezept();
+        rezept.setId("999999999");
         rezept.setName(TEST_NAME);
         rezept.setCategory(List.of("Dessert"));
         rezept.setDescription("Ein leckeres Testrezept");
@@ -32,9 +33,9 @@ public class DataTest {
  
     @BeforeEach
     public void cleanDbBefore() {
-        rezeptRepository.deleteAll();
+        rezeptRepository.deleteById("999999999");
     }
- 
+
     @Test
     @Order(1)
     public void testSaveRezept() {
@@ -46,7 +47,7 @@ public class DataTest {
     }
  
     @Test
-    @Order(2)
+    @Order(5)
     public void testDeleteRezept() {
         Rezept rezept = rezeptRepository.save(createTestRezept());
         rezeptRepository.deleteById(rezept.getId());
@@ -56,7 +57,7 @@ public class DataTest {
     }
  
     @Test
-    @Order(3)
+    @Order(2)
     public void testRezeptById() {
         Rezept rezept = rezeptRepository.save(createTestRezept());
  
@@ -66,7 +67,7 @@ public class DataTest {
     }
  
     @Test
-    @Order(4)
+    @Order(3)
     public void testRezeptByName() {
         rezeptRepository.save(createTestRezept());
  
@@ -76,7 +77,7 @@ public class DataTest {
     }
  
     @Test
-    @Order(5)
+    @Order(4)
     public void testFindByCategoryIn() {
         rezeptRepository.save(createTestRezept());
  
