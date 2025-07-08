@@ -104,7 +104,6 @@
                 <version>3.2.5</version>
   				<configuration>
     				<includes>
-                        <include>**/integration/**/*Test.java</include>
                         <include>**/unit/**/*Test.java</include>
       					<include>**/mock/**/*MockTest.java</include>
                     </includes>
@@ -117,7 +116,7 @@
                 <version>3.2.5</version>
                 <configuration>
     				<includes>
-      					<include>**/integration/**/*IT.java</include>
+      					<include>**/integration/**/*Test.java</include>
       					<include>**/smoke/**/*SmokeTest.java</include>
     				</includes>
   				</configuration>
